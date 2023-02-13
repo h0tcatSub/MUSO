@@ -21,10 +21,10 @@ result[0] = bonus_s[0]
 result[1] = bonus_s[1]
 result[2] = int(result[2])
 print("-" * 20)
-print("[BB回数予想  RB回数予想] 最大差玉 [BB確率予想  RB確率予想] 合成確率 前日最終スタート予想")
+print("前日最終スタート予想")
 merged_percent = (result[3] * result[4]) / ( result[3]+ result[4])
 lastroll = int(result[5])
-print(result[0:2], result[2], f"[1/{result[3]}, ", f"1/{result[4]}]", f"1/{merged_percent}", lastroll)
+print(lastroll)
 print(f"Score : {reg.score(X, y)}")
 print("-" * 20)
 

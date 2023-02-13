@@ -1,8 +1,9 @@
 import pandas as pd
 import sys
 from sklearn.linear_model import LinearRegression 
+from sklearn.linear_model import Ridge 
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.model_selection import train_test_split
+from sklearn.linear_model import Lasso
 
 df = pd.read_csv(sys.argv[1])
 X = df[["台番号", "date"]]
@@ -32,7 +33,6 @@ print("-" * 20)
 X = df[["台番号", "前日最終スタート", "date"]]
 y = df[["BB回数", "RB回数", "最大差玉", "BB確率", "RB確率"]]
 #print(y)
-reg = RandomForestRegressor()
 reg.fit(X, y)
 machine_num = int(sys.argv[2])
 day = int(sys.argv[3])

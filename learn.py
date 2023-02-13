@@ -31,7 +31,7 @@ print("-" * 20)
 
 
 X = df[["台番号", "前日最終スタート", "date"]]
-y = df[["BB回数", "RB回数", "最大差玉予想", "BB確率 予想", "RB確率 予想"]]
+y = df[["BB回数", "RB回数", "最大差玉予想", "BB確率", "RB確率"]]
 #print(y)
 reg.fit(X, y)
 machine_num = int(sys.argv[2])
